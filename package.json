@@ -5,24 +5,33 @@
     "version": "0.0.1",
     "publisher": "MedvedTMN",
     "license": "MIT",
-    "icon": "icon.png",
     "engines": {
         "vscode": "^1.26.0"
     },
-    "categories": [
+    "icon": "icon.png",
+    "homepage": "https://github.com/MedvedTMN/vscode-isbl/blob/master/README.md",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/MedvedTMN/vscode-isbl"
+    },"categories": [
         "Programming Languages"
     ],
     "contributes": {
         "languages": [{
-            "id": "isbl",
-            "aliases": ["ISBL", "isbl"],
-            "extensions": [".isbl"],
-            "configuration": "./language-configuration.json"
+          "id": "isbl",
+          "aliases": ["ISBL", "isbl"],
+          "extensions": [".isbl"],
+          "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "isbl",
-            "scopeName": "source.isbl",
-            "path": "./syntaxes/isbl.tmLanguage.json"
-        }]
+          "language": "isbl",
+          "scopeName": "source.isbl",
+          "path": "./syntaxes/isbl.tmLanguage.json"
+        }],
+    		"configurationDefaults": {
+          "[isbl]": {
+            "files.encoding": "windows1251"
+          }
+        }
     }
 }
