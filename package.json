@@ -1,0 +1,26 @@
+{
+    "name": "vscode-isbl",
+    "displayName": "ISBL",
+    "description": "DIRECTUM ISBL language support for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "MedvedTMN",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "isbl",
+            "aliases": ["ISBL", "isbl"],
+            "extensions": [".isbl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "isbl",
+            "scopeName": "source.isbl",
+            "path": "./syntaxes/isbl.tmLanguage.json"
+        }]
+    }
+}

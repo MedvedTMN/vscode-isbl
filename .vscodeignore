@@ -1,0 +1,9 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+.editorconfig
+.travis.yml
+vsc-extension-quickstart.md
+typings/**
+test/**
+jsconfig.json
