@@ -1,32 +1,80 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "ISBL",
-	"patterns": [
+  "name": "ISBL",
+  "scopeName": "source.isbl",
+  "fileTypes": [ "isbl" ],
+  "limitLineLength": false,
+  "patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.isbl",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.isbl",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
-				{
+        {
+				  "name": "keyword.control.isbl",
+				  "match": "\\b(else|иначе|endexcept|endfinally|endforeach|конецвсе|endif|конецесли|endwhile|конецпока|except|exitfor|finally|foreach|все|if|если|try|while|пока)\\b"
+        },
+        {
+          "name": "keyword.operator.isbl",
+          "match": "\\b(and|и|in|в|not|не|or|или)\\b"
+        }
+      ]
+  	},
+		"strings": {
+			"patterns": [
+        {
+          "name": "string.quoted.single.isbl",
+          "begin": "'",
+          "end": "'"
+        },
+        {
+          "name": "string.quoted.double.isbl",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
 					"name": "constant.character.escape.isbl",
 					"match": "\\\\."
 				}
 			]
+    },
+		"comments": {
+			"patterns": [
+        {
+          "name": "comment.line.double-slash.isbl",
+          "begin": "(?<!/)//(?:(?!/)|(?=//))",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.isbl"
+            }
+          },
+          "end": "(?=$)"
+    },
+        {
+          "name": "comment.block.isbl",
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					}
+        }
+			]
 		}
-	},
-	"scopeName": "source.isbl"
+    
+	}
 }
