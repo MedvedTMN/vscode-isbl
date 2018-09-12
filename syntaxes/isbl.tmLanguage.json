@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#constants"
+		},
+		{
+			"include": "#enums"
 		}
 	],
 	"repository": {
@@ -222,7 +225,371 @@
         },
         {
           "name": "constant.language.select-type.isbl",
-          "match": "(?i)\\b(SELECT_TYPE_SELECTABLE||||SELECT_TYPE_SELECTABLE_ONLY_CHILD|SELECT_TYPE_SELECTABLE_WITH_CHILD|SELECT_TYPE_UNSELECTABLE|MIN_CURRENT_PERIOD_BEGIN_DATE|MAX_CURRENT_PERIOD_END_DATE|ROUTE_BLOCK_NEED_REQUEST_ACTION_ON_SUBTASKS_PROP_NAME)\\b"
+          "match": "(?i)\\b(SELECT_TYPE_SELECTABLE|SELECT_TYPE_SELECTABLE_ONLY_CHILD|SELECT_TYPE_SELECTABLE_WITH_CHILD|SELECT_TYPE_UNSELECTABLE|MIN_CURRENT_PERIOD_BEGIN_DATE|MAX_CURRENT_PERIOD_END_DATE|ROUTE_BLOCK_NEED_REQUEST_ACTION_ON_SUBTASKS_PROP_NAME)\\b"
+        }
+			]
+    },
+		"enums": {
+			"patterns": [
+        {
+          "name": "constant.language.enum.account-type.isbl",
+          "match": "(?i)\\b(atUser|atGroup|atRole)\\b"
+        },
+        {
+          "name": "constant.language.enum.action-enabled-mode.isbl",
+          "match": "(?i)\\b(aemEnabledAlways|aemDisabledAlways|aemEnabledOnBrowse|aemEnabledOnEdit|aemDisabledOnBrowseEmpty)\\b"
+        },
+        {
+          "name": "constant.language.enum.add-position.isbl",
+          "match": "(?i)\\b(apBegin|apEnd)\\b"
+        },
+        {
+          "name": "constant.language.enum.alignment.isbl",
+          "match": "(?i)\\b(alLeft|alRight)\\b"
+        },
+        {
+          "name": "constant.language.enum.area-show-mode.isbl",
+          "match": "(?i)\\b(asmNever|asmNoButCustomize|asmAsLastTime|asmYesButCustomize|asmAlways)\\b"
+        },
+        {
+          "name": "constant.language.enum.certificate-invalidation-reason.isbl",
+          "match": "(?i)\\b(cirCommon|cirRevoked)\\b"
+        },
+        {
+          "name": "constant.language.enum.certificate-type.isbl",
+          "match": "(?i)\\b(ctSignature|ctEncode|ctSignatureEncode)\\b"
+        },
+        {
+          "name": "constant.language.enum.check-list-box-item-state.isbl",
+          "match": "(?i)\\b(clbUnchecked|clbChecked|clbGrayed)\\b"
+        },
+        {
+          "name": "constant.language.enum.close-on-esc.isbl",
+          "match": "(?i)\\b(ceISB|ceAlways|ceNever)\\b"
+        },
+        {
+          "name": "constant.language.enum.comp-type.isbl",
+          "match": "(?i)\\b(ctDocument|ctReference|ctScript|ctUnknown|ctReport|ctDialog|ctFunction|ctFolder|ctEDocument|ctTask|ctJob|ctNotice|ctControlJob)\\b"
+        },
+        {
+          "name": "constant.language.enum.condition-format.isbl",
+          "match": "(?i)\\b(cfInternal|cfDisplay)\\b"
+        },
+        {
+          "name": "constant.language.enum.connection-intent.isbl",
+          "match": "(?i)\\b(ciUnspecified|ciWrite|ciRead)\\b"
+        },
+        {
+          "name": "constant.language.enum.content-kind.isbl",
+          "match": "(?i)\\b(ckFolder|ckEDocument|ckTask|ckJob|ckComponentToken|ckAny|ckReference|ckScript|ckReport|ckDialog)\\b"
+        },
+        {
+          "name": "constant.language.enum.control-type.isbl",
+          "match": "(?i)\\b(ctISBLEditor|ctBevel|ctButton|ctCheckListBox|ctComboBox|ctComboEdit|ctGrid|ctDBCheckBox|ctDBComboBox|ctDBEdit|ctDBEllipsis|ctDBMemo|ctDBNavigator|ctDBRadioGroup|ctDBStatusLabel|ctEdit|ctGroupBox|ctInplaceHint|ctMemo|ctPanel|ctListBox|ctRadioButton|ctRichEdit|ctTabSheet|ctWebBrowser|ctImage|ctHyperLink|ctLabel|ctDBMultiEllipsis|ctRibbon|ctRichView|ctInnerPanel|ctPanelGroup|ctBitButton)\\b"
+        },
+        {
+          "name": "constant.language.enum.criterion-content-type.isbl",
+          "match": "(?i)\\b(cctDate|cctInteger|cctNumeric|cctPick|cctReference|cctString|cctText)\\b"
+        },
+        {
+          "name": "constant.language.enum.culture-type.isbl",
+          "match": "(?i)\\b(cltInternal|cltPrimary|cltGUI)\\b"
+        },
+        {
+          "name": "constant.language.enum.dataset-event-type.isbl",
+          "match": "(?i)\\b(dseBeforeOpen|dseAfterOpen|dseBeforeClose|dseAfterClose|dseOnValidDelete|dseBeforeDelete|dseAfterDelete|dseAfterDeleteOutOfTransaction|dseOnDeleteError|dseBeforeInsert|dseAfterInsert|dseOnValidUpdate|dseBeforeUpdate|dseOnUpdateRatifiedRecord|dseAfterUpdate|dseAfterUpdateOutOfTransaction|dseOnUpdateError|dseAfterScroll|dseOnOpenRecord|dseOnCloseRecord|dseBeforeCancel|dseAfterCancel|dseOnUpdateDeadlockError|dseBeforeDetailUpdate|dseOnPrepareUpdate|dseOnAnyRequisiteChange)\\b"
+        },
+        {
+          "name": "constant.language.enum.dataset-state.isbl",
+          "match": "(?i)\\b(dssEdit|dssInsert|dssBrowse|dssInActive)\\b"
+        },
+        {
+          "name": "constant.language.enum.date-format-type.isbl",
+          "match": "(?i)\\b(dftDate|dftShortDate|dftDateTime|dftTimeStamp)\\b"
+        },
+        {
+          "name": "constant.language.enum.date-offset-type.isbl",
+          "match": "(?i)\\b(dotDays|dotHours|dotMinutes|dotSeconds)\\b"
+        },
+        {
+          "name": "constant.language.enum.datetime-kind.isbl",
+          "match": "(?i)\\b(dtkndLocal|dtkndUTC)\\b"
+        },
+        {
+          "name": "constant.language.enum.dea-access-rights.isbl",
+          "match": "(?i)\\b(arNone|arView|arEdit|arFull)\\b"
+        },
+        {
+          "name": "constant.language.enum.document-default-action.isbl",
+          "match": "(?i)\\b(ddaView|ddaEdit)\\b"
+        },
+        {
+          "name": "constant.language.enum.edit-mode.isbl",
+          "match": "(?i)\\b(emLock|emEdit|emSign|emExportWithLock|emImportWithUnlock|emChangeVersionNote|emOpenForModify|emChangeLifeStage|emDelete|emCreateVersion|emImport|emUnlockExportedWithLock|emStart|emAbort|emReInit|emMarkAsReaded|emMarkAsUnreaded|emPerform|emAccept|emResume|emChangeRights|emEditRoute|emEditObserver|emRecoveryFromLocalCopy|emChangeWorkAccessType|emChangeEncodeTypeToCertificate|emChangeEncodeTypeToPassword|emChangeEncodeTypeToNone|emChangeEncodeTypeToCertificatePassword|emChangeStandardRoute|emGetText|emOpenForView|emMoveToStorage|emCreateObject|emChangeVersionHidden|emDeleteVersion|emChangeLifeCycleStage|emApprovingSign|emExport|emContinue|emLockFromEdit|emUnLockForEdit|emLockForServer|emUnlockFromServer|emDelegateAccessRights|emReEncode|emAddTimestamp|emAddValidationData)\\b"
+        },
+        {
+          "name": "constant.language.enum.editor-close-observ-type.isbl",
+          "match": "(?i)\\b(ecotFile|ecotProcess)\\b"
+        },
+        {
+          "name": "constant.language.enum.edms-application-action.isbl",
+          "match": "(?i)\\b(eaGet|eaCopy|eaCreate|eaCreateStandardRoute)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-lock-type.isbl",
+          "match": "(?i)\\b(edltAll|edltNothing|edltQuery)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-step-show-mode.isbl",
+          "match": "(?i)\\b(essmText|essmCard)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-step-version-type.isbl",
+          "match": "(?i)\\b(esvtLast|esvtLastActive|esvtSpecified)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-storage-function.isbl",
+          "match": "(?i)\\b(edsfExecutive|edsfArchive)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-storage-type.isbl",
+          "match": "(?i)\\b(edstSQLServer|edstFile)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-version-source-type.isbl",
+          "match": "(?i)\\b(edvstNone|edvstEDocumentVersionCopy|edvstFile|edvstTemplate|edvstScannedFile)\\b"
+        },
+        {
+          "name": "constant.language.enum.edocument-version-state.isbl",
+          "match": "(?i)\\b(vsDefault|vsDesign|vsActive|vsObsolete)\\b"
+        },
+        {
+          "name": "constant.language.enum.encode-type.isbl",
+          "match": "(?i)\\b(etNone|etCertificate|etPassword|etCertificatePassword)\\b"
+        },
+        {
+          "name": "constant.language.enum.exception-category.isbl",
+          "match": "(?i)\\b(ecException|ecWarning|ecInformation)\\b"
+        },
+        {
+          "name": "constant.language.enum.exported-signatures-type.isbl",
+          "match": "(?i)\\b(estAll|estApprovingOnly)\\b"
+        },
+        {
+          "name": "constant.language.enum.exported-version-type.isbl",
+          "match": "(?i)\\b(evtLast|evtLastActive|evtQuery)\\b"
+        },
+        {
+          "name": "constant.language.enum.field-data-type.isbl",
+          "match": "(?i)\\b(fdtString|fdtNumeric|fdtInteger|fdtDate|fdtText|fdtUnknown|fdtWideString|fdtLargeInteger)\\b"
+        },
+        {
+          "name": "constant.language.enum.folder-type.isbl",
+          "match": "(?i)\\b(ftInbox|ftOutbox|ftFavorites|ftCommonFolder|ftUserFolder|ftComponents|ftQuickLaunch|ftShortcuts|ftSearch)\\b"
+        },
+        {
+          "name": "constant.language.enum.grid-row-height.isbl",
+          "match": "(?i)\\b(grhAuto|grhX1|grhX2|grhX3)\\b"
+        },
+        {
+          "name": "constant.language.enum.hash-type.isbl",
+          "match": "(?i)\\b(htUnknown|htGost3411|htGost3411_2012_256|htGost3411_2012_512|htSha1|htSha256|htSha384|htSha512|htMD5)\\b"
+        },
+        {
+          "name": "constant.language.enum.hyperlink-type.isbl",
+          "match": "(?i)\\b(hltText|hltRTF|hltHTML)\\b"
+        },
+        {
+          "name": "constant.language.enum.image-file-format.isbl",
+          "match": "(?i)\\b(iffBMP|iffJPEG|iffMultiPageTIFF|iffSinglePageTIFF|iffTIFF|iffPNG)\\b"
+        },
+        {
+          "name": "constant.language.enum.image-mode.isbl",
+          "match": "(?i)\\b(im8bGrayscale|im24bRGB|im1bMonochrome)\\b"
+        },
+        {
+          "name": "constant.language.enum.image-type.isbl",
+          "match": "(?i)\\b(itBMP|itJPEG|itWMF|itPNG)\\b"
+        },
+        {
+          "name": "constant.language.enum.inplace-hint-kind.isbl",
+          "match": "(?i)\\b(ikhInformation|ikhWarning|ikhError|ikhNoIcon)\\b"
+        },
+        {
+          "name": "constant.language.enum.isbl-context.isbl",
+          "match": "(?i)\\b(icUnknown|icScript|icFunction|icIntegratedReport|icAnalyticReport|icDataSetEventHandler|icActionHandler|icFormEventHandler|icLookUpEventHandler|icRequisiteChangeEventHandler|icBeforeSearchEventHandler|icRoleCalculation|icSelectRouteEventHandler|icBlockPropertyCalculation|icBlockQueryParamsEventHandler|icChangeSearchResultEventHandler|icBlockEventHandler|icSubTaskInitEventHandler=18|icEDocDataSetEventHandler|icEDocLookUpEventHandler|icEDocActionHandler|icEDocFormEventHandler|icEDocRequisiteChangeEventHandler|icStructuredConversionRule|icStructuredConversionEventBefore|icStructuredConversionEventAfter|icWizardEventHandler|icWizardFinishEventHandler|icWizardStepEventHandler|icWizardStepFinishEventHandler|icWizardActionEnableEventHandler|icWizardActionExecuteEventHandler|icCreateJobsHandler|icCreateNoticesHandler|icBeforeLookUpEventHandler|icAfterLookUpEventHandler|icTaskAbortEventHandler|icWorkflowBlockActionHandler|icDialogDataSetEventHandler|icDialogActionHandler|icDialogLookUpEventHandler|icDialogRequisiteChangeEventHandler|icDialogFormEventHandler|icDialogValidCloseEventHandler|icBlockFormEventHandler|icTaskFormEventHandler|icReferenceMethod|icEDocMethod|icDialogMethod|icProcessMessageHandler|icFolderActionHandler|icFolderBeforeSearchEventHandler|icFolderMethod)\\b"
+        },
+        {
+          "name": "constant.language.enum.item-show.isbl",
+          "match": "(?i)\\b(isShow|isHide|isByUserSettings)\\b"
+        },
+        {
+          "name": "constant.language.enum.job-kind.isbl",
+          "match": "(?i)\\b(jkJob|jkNotice|jkControlJob)\\b"
+        },
+        {
+          "name": "constant.language.enum.join-type.isbl",
+          "match": "(?i)\\b(jtInner|jtLeft|jtRight|jtFull|jtCross)\\b"
+        },
+        {
+          "name": "constant.language.enum.label-pos.isbl",
+          "match": "(?i)\\b(lbpAbove|lbpBelow|lbpLeft|lbpRight)\\b"
+        },
+        {
+          "name": "constant.language.enum.licensing-type.isbl",
+          "match": "(?i)\\b(eltPerConnection|eltPerUser)\\b"
+        },
+        {
+          "name": "constant.language.enum.life-cycle-stage-font-color.isbl",
+          "match": "(?i)\\b(sfcUndefined|sfcBlack|sfcGreen|sfcRed|sfcBlue|sfcOrange|sfcLilac)\\b"
+        },
+        {
+          "name": "constant.language.enum.life-cycle-stage-font-style.isbl",
+          "match": "(?i)\\b(sfsItalic|sfsStrikeout|sfsNormal)\\b"
+        },
+        {
+          "name": "constant.language.enum.lockable-development-component-type.isbl",
+          "match": "(?i)\\b(ldctStandardRoute|ldctWizard|ldctScript|ldctFunction|ldctRouteBlock|ldctIntegratedReport|ldctAnalyticReport|ldctReferenceType|ldctEDocumentType|ldctDialog|ldctServerEvents)\\b"
+        },
+        {
+          "name": "constant.language.enum.max-record-count-restriction-type.isbl",
+          "match": "(?i)\\b(mrcrtNone|mrcrtUser|mrcrtMaximal|mrcrtCustom)\\b"
+        },
+        {
+          "name": "constant.language.enum.range-value-type.isbl",
+          "match": "(?i)\\b(vtEqual|vtGreaterOrEqual|vtLessOrEqual|vtRange)\\b"
+        },
+        {
+          "name": "constant.language.enum.relative-date.isbl",
+          "match": "(?i)\\b(rdYesterday|rdToday|rdTomorrow|rdThisWeek|rdThisMonth|rdThisYear|rdNextMonth|rdNextWeek|rdLastWeek|rdLastMonth)\\b"
+        },
+        {
+          "name": "constant.language.enum.report-destination.isbl",
+          "match": "(?i)\\b(rdWindow|rdFile|rdPrinter)\\b"
+        },
+        {
+          "name": "constant.language.enum.req-data-type.isbl",
+          "match": "(?i)\\b(rdtString|rdtNumeric|rdtInteger|rdtDate|rdtReference|rdtAccount|rdtText|rdtPick|rdtUnknown|rdtLargeInteger|rdtDocument)\\b"
+        },
+        {
+          "name": "constant.language.enum.requisite-event-type.isbl",
+          "match": "(?i)\\b(reOnChange|reOnChangeValues)\\b"
+        },
+        {
+          "name": "constant.language.enum.sb-time-type.isbl",
+          "match": "(?i)\\b(ttGlobal|ttLocal|ttUser|ttSystem)\\b"
+        },
+        {
+          "name": "constant.language.enum.search-show-mode.isbl",
+          "match": "(?i)\\b(ssmBrowse|ssmSelect|ssmMultiSelect|ssmBrowseModal)\\b"
+        },
+        {
+          "name": "constant.language.enum.select-mode.isbl",
+          "match": "(?i)\\b(smSelect|smLike|smCard)\\b"
+        },
+        {
+          "name": "constant.language.enum.signature-type.isbl",
+          "match": "(?i)\\b(stNone|stAuthenticating|stApproving)\\b"
+        },
+        {
+          "name": "constant.language.enum.signer-content-type.isbl",
+          "match": "(?i)\\b(sctString|sctStream)\\b"
+        },
+        {
+          "name": "constant.language.enum.strings-sort-type.isbl",
+          "match": "(?i)\\b(sstAnsiSort|sstNaturalSort)\\b"
+        },
+        {
+          "name": "constant.language.enum.string-value-type.isbl",
+          "match": "(?i)\\b(svtEqual|svtContain)\\b"
+        },
+        {
+          "name": "constant.language.enum.structured-object-attribute-type.isbl",
+          "match": "(?i)\\b(soatString|soatNumeric|soatInteger|soatDatetime|soatReferenceRecord|soatText|soatPick|soatBoolean|soatEDocument|soatAccount|soatIntegerCollection|soatNumericCollection|soatStringCollection|soatPickCollection|soatDatetimeCollection|soatBooleanCollection|soatReferenceRecordCollection|soatEDocumentCollection|soatAccountCollection|soatContents|soatUnknown)\\b"
+        },
+        {
+          "name": "constant.language.enum.task-abort-reason.isbl",
+          "match": "(?i)\\b(tarAbortByUser|tarAbortByWorkflowException)\\b"
+        },
+        {
+          "name": "constant.language.enum.text-value-type.isbl",
+          "match": "(?i)\\b(tvtAllWords|tvtExactPhrase|tvtAnyWord)\\b"
+        },
+        {
+          "name": "constant.language.enum.user-object-status.isbl",
+          "match": "(?i)\\b(usNone|usCompleted|usRedSquare|usBlueSquare|usYellowSquare|usGreenSquare|usOrangeSquare|usPurpleSquare|usFollowUp)\\b"
+        },
+        {
+          "name": "constant.language.enum.user-type.isbl",
+          "match": "(?i)\\b(utUnknown|utUser|utDeveloper|utAdministrator|utSystemDeveloper|utDisconnected)\\b"
+        },
+        {
+          "name": "constant.language.enum.values-build-type.isbl",
+          "match": "(?i)\\b(btAnd|btDetailAnd|btOr|btNotOr|btOnly)\\b"
+        },
+        {
+          "name": "constant.language.enum.variable-data-type.isbl",
+          "match": "(?i)\\b(vdtUnknown|vdtNull|vdtInteger|vdtFloat|vdtDate|vdtString|vdtObject|vdtBoolean|vdtVariant|vdtArray)\\b"
+        },
+        {
+          "name": "constant.language.enum.view-mode.isbl",
+          "match": "(?i)\\b(vmView|vmSelect|vmNavigation)\\b"
+        },
+        {
+          "name": "constant.language.enum.view-selection-mode.isbl",
+          "match": "(?i)\\b(vsmSingle|vsmMultiple|vsmMultipleCheck|vsmNoSelection)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-action-type.isbl",
+          "match": "(?i)\\b(wfatPrevious|wfatNext|wfatCancel|wfatFinish)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-form-element-property.isbl",
+          "match": "(?i)\\b(wfepUndefined|wfepText3|wfepText6|wfepText9|wfepSpinEdit|wfepDropDown|wfepRadioGroup|wfepFlag|wfepText12|wfepText15|wfepText18|wfepText21|wfepText24|wfepText27|wfepText30|wfepRadioGroupColumn1|wfepRadioGroupColumn2|wfepRadioGroupColumn3)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-form-element-type.isbl",
+          "match": "(?i)\\b(wfetQueryParameter|wfetText|wfetDelimiter|wfetLabel)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-param-type.isbl",
+          "match": "(?i)\\b(wptString|wptInteger|wptNumeric|wptBoolean|wptDateTime|wptPick|wptText|wptUser|wptUserList|wptEDocumentInfo|wptEDocumentInfoList|wptReferenceRecordInfo|wptReferenceRecordInfoList|wptFolderInfo|wptTaskInfo|wptContents|wptFileName|wptDate)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-step-result.isbl",
+          "match": "(?i)\\b(wsrComplete|wsrGoNext|wsrGoPrevious|wsrCustom|wsrCancel|wsrGoFinal)\\b"
+        },
+        {
+          "name": "constant.language.enum.wizard-step-type.isbl",
+          "match": "(?i)\\b(wstForm|wstEDocument|wstTaskCard|wstReferenceRecordCard|wstFinal)\\b"
+        },
+        {
+          "name": "constant.language.enum.work-access-type.isbl",
+          "match": "(?i)\\b(waAll|waPerformers|waManual)\\b"
+        },
+        {
+          "name": "constant.language.enum.workflow-block-type.isbl",
+          "match": "(?i)\\b(wsbStart|wsbFinish|wsbNotice|wsbStep|wsbDecision|wsbWait|wsbMonitor|wsbScript|wsbConnector|wsbSubTask|wsbLifeCycleStage|wsbPause)\\b"
+        },
+        {
+          "name": "constant.language.enum.workflow-data-type.isbl",
+          "match": "(?i)\\b(wdtInteger|wdtFloat|wdtString|wdtPick|wdtDateTime|wdtBoolean|wdtTask|wdtJob|wdtFolder|wdtEDocument|wdtReferenceRecord|wdtUser|wdtGroup|wdtRole|wdtIntegerCollection|wdtFloatCollection|wdtStringCollection|wdtPickCollection|wdtDateTimeCollection|wdtBooleanCollection|wdtTaskCollection|wdtJobCollection|wdtFolderCollection|wdtEDocumentCollection|wdtReferenceRecordCollection|wdtUserCollection|wdtGroupCollection|wdtRoleCollection|wdtContents|wdtUserList|wdtSearchDescription|wdtDeadLine|wdtPickSet|wdtAccountCollection)\\b"
+        },
+        {
+          "name": "constant.language.enum.work-importance.isbl",
+          "match": "(?i)\\b(wiLow|wiNormal|wiHigh)\\b"
+        },
+        {
+          "name": "constant.language.enum.work-route-type.isbl",
+          "match": "(?i)\\b(wrtSoft|wrtHard)\\b"
+        },
+        {
+          "name": "constant.language.enum.work-state.isbl",
+          "match": "(?i)\\b(wsInit|wsRunning|wsDone|wsControlled|wsAborted|wsContinued)\\b"
+        },
+        {
+          "name": "constant.language.enum.work-text-building-mode.isbl",
+          "match": "(?i)\\b(wtmFull|wtmFromCurrent|wtmOnlyCurrent)\\b"
         }
 			]
     }
