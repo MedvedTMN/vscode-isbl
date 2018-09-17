@@ -28,6 +28,12 @@
 		},
 		{
 			"include": "#methods"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
 		}
 	],
 	"repository": {
@@ -143,6 +149,14 @@
 				{
 					"match": "\\b0[xX][0-9a-fA-F]+|(\\b\\d+(\\.[0-9]+)?|\\.[0-9]+)([eE][+-]?[0-9]+)?\\b",
 					"name": "constant.numeric.isbl"
+				}
+			]
+		},
+    "functions": {
+			"patterns": [
+				{
+					"match": "(?i)\\b(?<![A-Za-zА-Яа-я!_\\.])[A-Za-zА-Яа-я!_]+\\s*(?=\\()\\b",
+					"name": "entity.name.function.isbl"
 				}
 			]
 		},
