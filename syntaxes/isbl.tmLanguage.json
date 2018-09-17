@@ -19,6 +19,15 @@
 		},
 		{
 			"include": "#enums"
+		},
+		{
+			"include": "#interfaces"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#methods"
 		}
 	],
 	"repository": {
@@ -65,16 +74,76 @@
 					"begin": "/\\*",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.isbl"
 						}
 					},
 					"end": "\\*/",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.isbl"
 						}
 					}
         }
+			]
+		},
+		"variables": {
+			"patterns": [
+        {
+          "name": "variable.language.isbl",
+          "match": "(?i)\\b(?<!\\.|!)(AltState|Application|CallType|ComponentTokens|CreatedJobs|CreatedNotices|ControlState|DialogResult|Dialogs|EDocuments|EDocumentVersionSource|Folders|GlobalIDs|Job|Jobs|InputValue|LookUpReference|LookUpRequisiteNames|LookUpSearch|Object|ParentComponent|Processes|References|Requisite|ReportName|Reports|Result|Scripts|Searches|SelectedAttachments|SelectedContents|SelectedItems|SelectMode|Sender|ServerEvents|ServiceFactory|ShiftState|SubTask|SystemDialogs|Tasks|VisibleContents|Wizard|Wizards|Work|ВызовСпособ|ИмяОтчета|РеквЗнач)\\b"
+        },
+        {
+          "name": "variable.language.old.isbl",
+          "match": "(?i)(!?)\\b(Result|Sender)\\b"
+        },
+        {
+          "name": "variable.other.isbl",
+          "match": "(?i)(!?)\\b(?<!\\.)([A-Za-zА-Яа-яёЁ_!][A-Za-zА-Яа-яёЁ_0-9]*)\\b(?!\\()"
+        }
+			]
+    },
+		"methods": {
+			"patterns": [
+        {
+          "match": "(?i)(\\.)([A-Za-zА-Яа-я!_]+)\\b",
+          "captures": {
+						"1": {
+							"name": "punctuation.accessor.isbl"
+						},
+						"2": {
+							"name": "meta.method.isbl"
+						}
+					}
+        }
+			]
+    },
+		"interfaces": {
+			"patterns": [
+        {
+          "match": "(?i)(\\:)\\s*(Application|IAccessRights|IAccountRepository|IAccountSelectionRestrictions|IAction|IActionList|IAddValidationDataOperationResult|IAdministrationHistoryDescription|IAnchors|IApplication|IArchiveInfo|IAttachment|IAttachmentList|ICheckListBox|ICheckPointedList|IColor|IColumn|IComponent|IComponentDescription|IComponentToken|IComponentTokenFactory|IComponentTokenInfo|ICompRecordInfo|IConnection|IContents|IControl|IControlJob|IControlJobInfo|IControlList|ICrypto|ICrypto2|ICustomJob|ICustomJobInfo|ICustomListBox|ICustomObjectWizardStep|ICustomWork|ICustomWorkInfo|IDataSet|IDataSetAccessInfo|IDataSigner|IDateCriterion|IDateRequisite|IDateRequisiteDescription|IDateValue|IDeaAccessRights|IDeaObjectInfo|IDevelopmentComponentLock|IDialog|IDialogFactory|IDialogPickRequisiteItems|IDialogsFactory|IDICSFactory|IDocRequisite|IDocumentInfo|IDualListDialog|IECertificate|IECertificateInfo|IECertificates|IEditControl|IEditorForm|IEdmsExplorer|IEdmsObject|IEdmsObjectDescription|IEdmsObjectFactory|IEdmsObjectInfo|IEDocument|IEDocumentAccessRights|IEDocumentCriterion|IEDocumentDescription|IEDocumentEditor|IEDocumentFactory|IEDocumentInfo|IEDocumentStorage|IEDocumentVersion|IEDocumentVersionListDialog|IEDocumentVersionSource|IEDocumentWizardStep|IEDocVerSignature|IEDocVersionState|IEnabledMode|IEncodeProvider|IEncrypter|IETimestamp|IETimestampVerificationInfo|IEvent|IEventList|IException|IExternalEvents|IExternalHandler|IFactory|IField|IFileDialog|IFolder|IFolderDescription|IFolderDialog|IFolderFactory|IFolderInfo|IForEach|IForm|IFormTitle|IFormWizardStep|IGlobalIDFactory|IGlobalIDInfo|IGrid|IHasher|IHistoryDescription|IHyperLinkControl|IImageButton|IImageControl|IInnerPanel|IInplaceHint|IIntegerCriterion|IIntegerList|IIntegerRequisite|IIntegerValue|IISBLEditorForm|IJob|IJobDescription|IJobFactory|IJobForm|IJobInfo|ILabelControl|ILargeIntegerCriterion|ILargeIntegerRequisite|ILargeIntegerValue|ILicenseInfo|ILifeCycleStage|IList|IListBox|ILocalIDInfo|ILocalization|ILock|IMemoryDataSet|IMessagingFactory|IMetadataRepository|INotice|INoticeInfo|INumericCriterion|INumericRequisite|INumericValue|IObject|IObjectDescription|IObjectImporter|IObjectInfo|IObserver|IPanelGroup|IPickCriterion|IPickProperty|IPickRequisite|IPickRequisiteDescription|IPickRequisiteItem|IPickRequisiteItems|IPickValue|IPrivilege|IPrivilegeList|IProcess|IProcessFactory|IProcessMessage|IProgress|IProperty|IPropertyChangeEvent|IQuery|IReference|IReferenceCriterion|IReferenceEnabledMode|IReferenceFactory|IReferenceHistoryDescription|IReferenceInfo|IReferenceRecordCardWizardStep|IReferenceRequisiteDescription|IReferencesFactory|IReferenceValue|IRefRequisite|IReport|IReportFactory|IRequisite|IRequisiteDescription|IRequisiteDescriptionList|IRequisiteFactory|IRichEdit|IRouteStep|IRule|IRuleList|ISchemeBlock|IScript|IScriptFactory|ISearchCriteria|ISearchCriterion|ISearchDescription|ISearchFactory|ISearchFolderInfo|ISearchForObjectDescription|ISearchResultRestrictions|ISecuredContext|ISelectDialog|IServerEvent|IServerEventFactory|IServiceDialog|IServiceFactory|ISignature|ISignProvider|ISignProvider2|ISignProvider3|ISimpleCriterion|IStringCriterion|IStringList|IStringRequisite|IStringRequisiteDescription|IStringValue|ISystemDialogsFactory|ISystemInfo|ITabSheet|ITask|ITaskAbortReasonInfo|ITaskCardWizardStep|ITaskDescription|ITaskFactory|ITaskInfo|ITaskRoute|ITextCriterion|ITextRequisite|ITextValue|ITreeListSelectDialog|IUser|IUserList|IValue|IView|IWebBrowserControl|IWizard|IWizardAction|IWizardFactory|IWizardFormElement|IWizardParam|IWizardPickParam|IWizardReferenceParam|IWizardStep|IWorkAccessRights|IWorkDescription|IWorkflowAskableParam|IWorkflowAskableParams|IWorkflowBlock|IWorkflowBlockResult|IWorkflowEnabledMode|IWorkflowParam|IWorkflowPickParam|IWorkflowReferenceParam|IWorkState|IWorkTreeCustomNode|IWorkTreeJobNode|IWorkTreeTaskNode|IXMLEditorForm|SBCrypto)((\\s*(\\.)[A-Za-zА-Яа-я!_]+)*)",
+          "captures": {
+						"1": {
+							"name": "punctuation.separator.colon.isbl"
+						},
+						"2": {
+							"name": "storage.type.isbl"
+						},
+						"3": {
+							"name": "storage.type.subtype.isbl"
+						},
+						"5": {
+							"name": "punctuation.accessor.isbl"
+						}
+					}
+        }
+			]
+    },
+    "numbers": {
+			"patterns": [
+				{
+					"match": "\\b0[xX][0-9a-fA-F]+|(\\b\\d+(\\.[0-9]+)?|\\.[0-9]+)([eE][+-]?[0-9]+)?\\b",
+					"name": "constant.numeric.isbl"
+				}
 			]
 		},
 		"constants": {
