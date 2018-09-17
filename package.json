@@ -28,6 +28,10 @@
           "scopeName": "source.isbl",
           "path": "./syntaxes/isbl.tmLanguage.json"
         }],
+        "snippets": [{
+          "language": "isbl",
+          "path": "./snippets/isbl.json"
+        }],
     		"configurationDefaults": {
           "[isbl]": {
             "files.encoding": "windows1251"
