@@ -15,7 +15,7 @@
     "url": "https://github.com/MedvedTMN/vscode-isbl"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages", "Snippets", "Themes"
   ],
   "contributes": {
     "languages": [
