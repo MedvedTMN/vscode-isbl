@@ -2,7 +2,7 @@
     "name": "vscode-isbl",
     "displayName": "ISBL",
     "description": "DIRECTUM ISBL language support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "MedvedTMN",
     "license": "MIT",
     "engines": {
