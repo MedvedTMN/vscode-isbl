@@ -1,7 +1,11 @@
 # Change Log
 All notable changes to the "vscode-isbl" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
+### Added
+- Add integration with [Development Transfer Utility](https://github.com/DirectumCompany/DevelopmentTransferUtility)
+
+## [1.0.0] - 2018-09-18
 - Initial release
+
+[Unreleased]: https://github.com/MedvedTMN/vscode-isbl/compare/v1.0.0...HEAD
