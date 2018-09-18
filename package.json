@@ -1,50 +1,65 @@
 {
-    "name": "vscode-isbl",
-    "displayName": "ISBL",
-    "description": "DIRECTUM ISBL language support for Visual Studio Code",
-    "version": "0.0.1",
-    "publisher": "MedvedTMN",
-    "license": "MIT",
-    "engines": {
-        "vscode": "^1.26.0"
-    },
-    "icon": "assets/logo.png",
-    "homepage": "https://github.com/MedvedTMN/vscode-isbl/blob/master/README.md",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/MedvedTMN/vscode-isbl"
-    },"categories": [
-        "Programming Languages"
+  "name": "vscode-isbl",
+  "displayName": "ISBL",
+  "description": "DIRECTUM ISBL language support for Visual Studio Code",
+  "version": "0.0.2",
+  "publisher": "MedvedTMN",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "icon": "assets/logo.png",
+  "homepage": "https://github.com/MedvedTMN/vscode-isbl/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MedvedTMN/vscode-isbl"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "isbl",
+        "aliases": [
+          "ISBL",
+          "isbl"
+        ],
+        "extensions": [
+          ".isbl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-          "id": "isbl",
-          "aliases": ["ISBL", "isbl"],
-          "extensions": [".isbl"],
-          "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-          "language": "isbl",
-          "scopeName": "source.isbl",
-          "path": "./syntaxes/isbl.tmLanguage.json"
-        }],
-        "themes": [{
-          "label": "ISBL Dark (ISBL-Editor dark)",
-          "uiTheme": "vs-dark",
-          "path": "./themes/isbl-dark-color-theme.json"
-        },{
-          "label": "ISBL Light (ISBL-Editor light)",
-          "uiTheme": "vs",
-          "path": "./themes/isbl-light-color-theme.json"
-        }],
-        "snippets": [{
-          "language": "isbl",
-          "path": "./snippets/isbl.json"
-        }],
-    		"configurationDefaults": {
-          "[isbl]": {
-            "files.encoding": "windows1251"
-          }
-        }
+    "grammars": [
+      {
+        "language": "isbl",
+        "scopeName": "source.isbl",
+        "path": "./syntaxes/isbl.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "ISBL Dark (ISBL-Editor dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/isbl-dark-color-theme.json"
+      },
+      {
+        "label": "ISBL Light (ISBL-Editor light)",
+        "uiTheme": "vs",
+        "path": "./themes/isbl-light-color-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "isbl",
+        "path": "./snippets/isbl.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[isbl]": {
+        "files.encoding": "windows1251"
+      }
     }
+  }
 }
