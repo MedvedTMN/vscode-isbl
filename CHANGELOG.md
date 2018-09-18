@@ -7,5 +7,3 @@ All notable changes to the "vscode-isbl" extension will be documented in this fi
 
 ## [1.0.0] - 2018-09-18
 - Initial release
-
-[Unreleased]: https://github.com/MedvedTMN/vscode-isbl/compare/v1.0.0...HEAD
