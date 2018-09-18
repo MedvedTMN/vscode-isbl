@@ -3,7 +3,7 @@
 	"type": "dark",
 	"colors": {
 		"editor.background": "#1e1e1e",
-		"editor.foreground": "#d4d4d4",
+		"editor.foreground": "#f0f0f0",
 		"editor.inactiveSelectionBackground": "#3a3d41",
 		"editorIndentGuide.background": "#404040",
 		"editorIndentGuide.activeBackground": "#707070",
@@ -63,7 +63,7 @@
 				"storage.type.primitive.groovy"
 			],
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#f0f0f0"
 			}
 		},
 		{
@@ -88,7 +88,7 @@
       ],
 			"settings": {
         "fontStyle": "bold",
-				"foreground": "#d4d4d4"
+				"foreground": "#f0f0f0"
 			}
 		},
 		{
@@ -138,14 +138,14 @@
 			"name": "Methods",
 			"scope": "meta.method",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#f0f0f0"
 			}
 		},
 		{
 			"name": "Numbers",
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#f0f0f0"
 			}
 		},
 		{
