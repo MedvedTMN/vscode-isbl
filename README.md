@@ -1,8 +1,8 @@
 <p>
-  <h1 align="center">ISBL for Visual Studio Code</h1>
+  <h1>ISBL for Visual Studio Code</h1>
 </p>
 
-<p align="center">
+<p>
   <a href="https://marketplace.visualstudio.com/items?itemName=MedvedTMN.vscode-isbl">
     <img src="https://vsmarketplacebadge.apphb.com/version-short/MedvedTMN.vscode-isbl.svg?style=flat-square">
   </a>
